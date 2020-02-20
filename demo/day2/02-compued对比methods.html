@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+<!--    <h2>{{// firstName+" "+lastName}}</h2>-->
+    <h2>{{getName()}}</h2>
+    <h2>{{getName()}}</h2>
+    <h2>{{getName()}}</h2>
+    <h2>{{getName()}}</h2>
+    <h2>{{fullName}}</h2>
+    <h2>{{fullName}}</h2>
+    <h2>{{fullName}}</h2>
+    <h2>{{fullName}}</h2>
+    <!--    <h2 :style="[s,t]">hello vue</h2>-->
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            firstName:"Tom",
+            lastName:"King"
+        },
+        methods:{
+            getName(){
+                return this.firstName + " "+ this.lastName
+                console.log("methods")
+            }
+        },
+        computed:{
+            fullName(){
+                console.log("computed")
+                return this.firstName + " "+ this.lastName
+            }
+        }
+
+    })
+</script>
+</html>

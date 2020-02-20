@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <style>
+        .haha{
+            color: #42b983;
+        }
+        .chichi{
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2 class="haha">{{img}}</h2>
+    <h2 :class="style">{{img}}</h2>
+    <h3 :class="{haha:true,chichi:false}">{{img}}</h3>
+    <h3 :class="['haha',style]">{{img}}</h3>
+    <img src="../../public/favicon.ico">
+    <img :src="img">
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            img:"../../public/favicon.ico",
+            style:"haha",
+            chichi:"chichi",
+            movies:["aa","bb","cc","dd"]
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+    </script>
+</head>
+<body>
+<div id="app">
+    同意协议:
+    <input type="checkbox" v-model="checked">,
+    爱好：篮球<input type="checkbox" v-model="hobby[0]">,
+        足球<input type="checkbox" v-model="hobby[1]">,
+        乒乓球<input type="checkbox" v-model="hobby[2]">,
+        棒球<input type="checkbox" v-model="hobby[3]">
+    <hr>
+    爱好：篮球<input type="checkbox" v-model="hobbies" value="B">,
+    足球<input type="checkbox" v-model="hobbies" value="E">,
+    乒乓球<input type="checkbox" v-model="hobbies" value="T">,
+    棒球<input type="checkbox" v-model="hobbies" value="A">
+    <br>
+    {{hobbies}}
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            checked:true,
+            hobby:[true,true,true,true],
+            hobbies:[]
+        },methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>promise</h3>
+<script>
+    // setTimeout(function () {
+    //     console.log("hello promise")
+    // },1000)
+    // 本身也是函数
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("第一层");
+            console.log("第一层");
+            console.log("第一层");
+            console.log("第一层");
+            setTimeout(()=>{
+                console.log("second");
+                console.log("second");
+                console.log("second");
+                console.log("second");
+            },1000)
+        }, 2000)
+    });
+    new Promise(((resolve, reject) => {
+        setTimeout(()=>{
+            resolve()
+        },1000)
+    })).then(()=>{
+        console.log("第一层");
+        console.log("第一层");
+        console.log("第一层");
+        console.log("第一层");
+        return new Promise(((resolve, reject) => {
+            setTimeout(()=>{
+                resolve()
+            })
+        })).then(()=>{
+            console.log("second");
+            console.log("second");
+            console.log("second");
+            console.log("second");
+        })
+    })
+    new Promise(((resolve, reject) => {
+        setTimeout(()=>{
+            resolve();
+            // 处理错误信息
+            reject("err msg")
+        },1000)
+    })).then(()=>{
+        console.log("第一层");
+        console.log("第一层");
+        console.log("第一层");
+        console.log("第一层");
+        return new Promise(((resolve, reject) => {
+            setTimeout(()=>{
+                resolve()
+            })
+        })).then(()=>{
+            console.log("second");
+            console.log("second");
+            console.log("second");
+            console.log("second");
+        })
+    }).catch(onerror=>{
+        console.log(onerror)
+    })
+</script>
+</body>
+</html>

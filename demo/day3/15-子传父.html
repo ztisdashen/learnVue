@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+    </script>
+
+</head>
+<body>
+<template id="cp23">
+    <div>
+        <h2>template</h2>
+        <button v-for="i in c" @click="btnClick(i.id)">{{i.name}}</button>
+    </div>
+
+</template>
+<div id="app">
+    <cp1 @itemclick="cpnClick"></cp1>
+</div>
+<script>
+    const cp = Vue.extend({
+        template:`#cp23`,
+        data(){
+            return {c:[{id:0,name:"A"},{id:1,name:"Ae"},{id:2,name:"Ar"},{id:3,name:"Aw"}]}
+        },methods:{
+            btnClick(id){
+                //$emit(自定义事件名称)
+                // console.log("haha")
+                this.$emit('itemclick',id)
+            }
+        }
+
+    });
+    new Vue({
+        el: "#app",
+        data: {
+            msg: ['A','B','C','D'],
+            m:"hello Vue"
+        },
+        components:{
+            cp1:cp
+        },methods:{
+            cpnClick(id){
+                console.log('event'+" "+id);
+            }
+        }
+    })
+</script>
+</body>
+</html>

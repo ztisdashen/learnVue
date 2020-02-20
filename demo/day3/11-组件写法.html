@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+    </script>
+    <script type="text/x-template" id="cp1">
+    <div>
+        <h2>hello world</h2>
+    </div>
+</script>
+</head>
+<body>
+<template id="cp23">
+    <h2>template</h2>
+</template>
+<div id="app">
+    <cp1></cp1>
+    <cp2></cp2>
+</div>
+<script>
+    const cpn1 = Vue.extend({
+        // language=HTML
+        template: "#cp1"
+    });
+    const c = Vue.component("cp2",{
+        template:"#cp23"
+    });
+    new Vue({
+        el: "#app",
+        data: {
+            msg: "1212"
+        },
+        components:{
+            cp1:cpn1,
+        }
+    })
+</script>
+</body>
+</html>

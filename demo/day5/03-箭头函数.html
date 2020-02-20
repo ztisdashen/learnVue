@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const  a = ()=>{
+        return 1+5;
+    };
+    const k = (a,b)=> a+b;
+    const obj = {
+        aaa(){
+            setTimeout(function () {
+                console.log(this);
+            })
+        },
+        bbb(){
+            setTimeout(()=>console.log(this))
+        }
+    }
+    obj.aaa()
+    obj.bbb()
+</script>
+</body>
+</html>

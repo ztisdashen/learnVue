@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const num = [12,111,15,160];
+        //filter 返回一个bool值 对每个函数都执行一次
+        num.filter(function (n) {
+            return n < 20
+        });
+        let newNum = num.map(function (n) {
+            return n * 2;
+        });
+        newNum.reduce((oldVal,newVal)=>{
+           return oldVal + newVal
+        });
+        num.filter(n => n<20).map(n => n * 2).reduce((o,n)=> o+n)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

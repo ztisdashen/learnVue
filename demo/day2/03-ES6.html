@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 块级作用域  变量在那个范围可用
+        var func;
+        {
+            var name = "tom";
+            func=function () {
+                console.log(name);
+            }
+
+        }
+        name = "haha"
+        func()
+        var btns = document.getElementsByTagName("button")
+        for(var i=0;i>btns.length;i++){
+            btns[i].addEventListener("click",function () {
+                console.log("第 "+i+"个btn被点击了")
+            //    最后肯定都是第5个被点击了
+            //    因为var i被改变了
+
+            })
+        }
+    </script>
+</head>
+<body>
+<button>btn1</button>
+<button>btn1</button>
+<button>btn1</button>
+<button>btn1</button>
+<button>btn1</button>
+</body>
+</html>

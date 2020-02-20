@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+    <h2 v-if="score > 90">hello vue</h2>
+    <h2 v-else-if="score>80">hello hh</h2>
+    <h2 v-else>huhu</h2>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            score:50
+        },
+        methods: {
+
+        }
+
+    })
+</script>
+</html>

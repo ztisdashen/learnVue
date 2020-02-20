@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+<button @click="btnClick">btn1</button>
+<button @click="btnClick()">btn1</button>
+<button @click="btn3Click('abc')">btn1</button>
+<button @click="btn4Click">btn4</button>
+<!--    m默认event为第一个参数-->
+<button @click="btn45lick('abc',$event)">btn5</button>
+</div>
+<!--没有参数时默认存在event参数-->
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            count: 0
+        },
+        methods: {
+            btnClick(){
+                console.log("------")
+            },
+            btn3Click(abc){
+                console.log("------"+abc)
+            },
+            btn4Click(event){
+                console.log(event)
+            },
+            btn45lick(abc,event){
+                console.log(abc)
+                console.log(event)
+            }
+        }
+
+
+    })
+</script>
+</html>

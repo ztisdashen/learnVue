@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+    </script>
+
+</head>
+<body>
+<template id="cp23">
+    <div>
+        <h2>template</h2>
+        <ul>
+            <li v-for="i in cmovies">{{i}}</li>
+        </ul>
+        <h1>{{chichi}}</h1>
+    </div>
+
+</template>
+<div id="app">
+    <cp1 v-bind:cmovies="msg" :chichi="m"></cp1>
+</div>
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            msg: ['A','B','C','D'],
+            m:"hello Vue"
+        },
+        components:{
+            cp1:{
+                template:`#cp23`,
+                //变量名
+                // props:['cmovies','chichi']
+                props:{
+                    //类型限制
+                    // cmovies:Array,
+                    // chichi:String
+                    //    提供默认值
+                    chichi:{
+                        type:String,
+                        default:"default",
+                        required:true
+                    },
+                    cmovies:{
+                        type: Array,
+                        default: ['default'],
+                        required:true
+                    }
+                }
+            },
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<template id="apk">
+    <div>
+        <h2>访问父组件</h2>
+        <button @click="showMsg">button</button>
+    </div>
+</template>
+
+<body>
+<div id="app">
+    <sp1></sp1>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        methods: {
+        },
+        components:{
+            sp1:{
+                template:`#apk`,
+                data(){
+                    return {name:'我是子组件'}
+                },
+                methods:{
+                    showMsg(){
+                        console.log(this.$parent);
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

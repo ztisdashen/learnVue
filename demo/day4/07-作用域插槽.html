@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<template id="apk">
+    <div>
+        <h2>作用域插槽</h2>
+        <slot :data="pl">
+            <ul>
+                <li v-for="i in pl">{{i}}</li>
+            </ul>
+        </slot>
+
+    </div>
+</template>
+
+<body>
+<div id="app">
+    <sp1>
+        <template slot-scope="slot">
+            <span v-for="i in slot.data">{{i+"-"}}</span>
+        </template>
+    </sp1>
+    <sp1></sp1>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+        },
+        components:{
+            sp1:{
+                template:`#apk`,
+                data(){
+                    return {pl:['Java','Swift','Python','Go','C++','R']}
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

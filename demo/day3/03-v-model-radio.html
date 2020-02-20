@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+    </script>
+</head>
+<body>
+<div id="app">
+    <label for="male">
+        <input type="radio" id="male" name="sex" v-model="sex" value="男">男
+
+    </label>
+    <label for="female">
+        <input type="radio" id="female" name="sex" v-model="sex" value="女">女
+    </label>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            sex:""
+        },methods:{
+
+        }
+    })
+</script>
+</body>
+</html>

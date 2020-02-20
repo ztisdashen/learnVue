@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+    </script>
+</head>
+<body>
+<div id="app">
+
+    <my-cpn></my-cpn>
+    <my-cpn></my-cpn>
+    <my-cpn></my-cpn>
+</div>
+<script>
+    // 1. 创建组件构造器
+    const cpn = Vue.extend({
+        template: `<div><h2>哈哈</h2> <p>how are you</p> <p>i'm fine Thank you</p><hr></div>`
+    });
+    // 2. 注册组件
+    Vue.component("my-cpn", cpn);
+    // 3. 使用组件
+    new Vue({
+        el: "#app",
+    });
+    new Vue({
+        el: "#app2",
+        component:{
+            ckk:cpn
+        }
+
+    })
+</script>
+</body>
+</html>

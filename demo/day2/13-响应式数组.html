@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(i,index) in p" >{{i+" "+index}}</li>
+    </ul>
+    <button @click="push">push</button>
+    <br>
+    <button @click="pop">pop</button>
+    <button @click="shift">shift</button>
+    <button @click="upshift">unshift</button>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            p:["A","B","C",'D']
+        },
+        methods:{
+            push(){
+                this.p.push("p")
+            //    并不是所有的数据改变都是相应式的
+            //     this.p[0] = "asd"
+                /**
+                 * push
+                 * pop
+                 *
+                 *
+                 *
+                 */
+            },
+            pop(){
+                this.p.pop()
+            },
+            shift(){
+                this.p.shift()
+            },unshift(){
+                this.p.unshift("keke")
+            }
+        }
+
+
+    })
+</script>
+</html>

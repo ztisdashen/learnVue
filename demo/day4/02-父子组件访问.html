@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<template id="apk">
+    <div>我是子组件</div>
+</template>
+
+<body>
+<div id="app">
+    <button @click="btnClick">button</button>
+    <sp1></sp1>
+    <sp1 ref="aaa"></sp1>
+    <sp1></sp1>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        methods: {
+          btnClick(){
+              this.$children[0].showMsg();
+              this.$children[0].name;
+              console.log("-----------------");
+              console.log(this.$refs.aaa)
+          }
+        },
+        components:{
+            sp1:{
+                template:`#apk`,
+                data(){
+                    return {name:'我是子组件'}
+                },
+                methods:{
+                    showMsg(){
+                        console.log('msg');
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

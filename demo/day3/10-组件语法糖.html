@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+    </script>
+</head>
+<body>
+<div id="app">
+    <cp1></cp1>
+    <cp2></cp2>
+</div>
+<script>
+    const cpn1 = Vue.extend({
+        // language=HTML
+        template: `
+        <div>
+            <h2>hello Vue.js 1</h2>
+        </div>`
+    });
+    const cpn2 = Vue.extend({
+        // language=HTML
+        template: `
+        <div>
+            <h2>hello Vue.js 2</h2>
+            <hr>
+            <my_cp></my_cp>
+        </div>`,
+        components:{
+            my_cp:cpn1
+        }
+    });
+    new Vue({
+        el: "#app",
+        data: {
+            msg: "1212"
+        },
+        components:{
+            cp1:cpn1,
+            cp2:cpn2
+        }
+    })
+</script>
+</body>
+</html>

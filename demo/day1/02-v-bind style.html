@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+    <h3 :style="{color:s}">123</h3>
+    <h2 :style="{fontSize:'50px',color:'red'}">123456</h2>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            s: "blue"
+        }
+
+    })
+</script>
+</html>

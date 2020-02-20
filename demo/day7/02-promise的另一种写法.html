@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    new Promise(((resolve, reject) => {
+        resolve("hello promise");
+        reject("err msg")
+    })).then(data=>{
+        console.log(data)
+    },err=>{
+        console.log(err)
+    })
+</script>
+</body>
+</html>

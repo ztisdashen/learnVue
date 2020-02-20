@@ -1,0 +1,126 @@
+20200201
+	p112-p116
+	p116 30min
+	p117 7min
+	p118 25min
+	p119 24min
+	p120 11min
+	p121 15min
+	p122 15min
+
+20200202
+	p123 12min
+	p124 15min
+	p125 40min
+	p126 10min
+	p127 19min
+	p128 13min
+	p129 21min
+	
+20200203 
+	p130 31min
+	p131 13min
+	p132 12min
+	p133 21min
+	p134 10min
+	p135 6min
+	p136 20min
+	p138 24min
+	p139 19min
+	p140 10min
+	
+20200204
+	p141 13min
+	p142 22min
+	p143 14min
+	p144 10min
+	p145 40min
+	
+20200205
+	p146 27min
+	p147 23min
+	p148 13min
+	p149 11min
+	p150 11min
+	p151 15min
+	p152 5min
+	p153 18min
+	p154 27min
+	p155 20min
+	p156 11min
+	p157 14min
+	p158 24min
+	
+	
+20200206
+	p159 15min
+	p160 24min
+	P161 27min
+	p162 10min
+	p163 30min
+	
+	
+20200207
+	p164 33min
+	p165 12min
+	p166 33min
+	p167 22min
+	p168 24min
+	p169 21min
+	p170 36min
+	
+	
+20200208 
+	p171 28min
+	p172 19min
+	p173 30min
+	p174 22min
+	p175 10min
+	p176 34min
+	p177 17min
+	p178 11min
+	p179 9min
+	p180 20min
+	
+20200209
+	p181 25min
+	p182 9min
+	p184 7min
+	p185 15min
+	p186 7min
+	
+	
+20200210
+	p198 33min
+	p199 8min
+	p200 25min
+	p201 7min
+	p202 14min
+	p203 25min
+	p204 40min
+	p205 22min
+	p206 18min
+	p207 10min
+	p208 13min
+	p209 21min
+	
+	
+20200211
+	p210 18min
+	p211 13min
+	p212 22min
+	p213 25min
+	p214 13min
+	p215 7min
+	p216 6min
+	p218 13min
+	
+20200213
+	p220 13min
+	p221 14min
+	p222 24min
+	p223 13min
+	p224 14min
+	p229 8min
+	
+	

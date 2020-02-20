@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+<h2 v-if="isShow">if</h2>
+    <h2 v-show="isShow">show</h2>
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+           isShow:true
+        },
+
+
+    })
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<template id="apk">
+    <div>
+        <h2>slot</h2>
+        <slot name="slot1"><h3>插槽 1</h3></slot>
+        <slot name="slot2"><h3>插槽 2</h3></slot>
+        <slot name="slot3"><h3>插槽 3</h3></slot>
+        <slot><h3>没有名字的插槽</h3></slot>
+    </div>
+</template>
+
+<body>
+<div id="app">
+    <sp1><button slot="slot1">案例</button></sp1>
+    <sp1><h2 slot="slot2">案例</h2></sp1>
+    <sp1><hr slot="slot3"></sp1>
+    <sp1/>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        methods: {
+        },
+        components:{
+            sp1:{
+                template:`#apk`,
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<template id="apk">
+    <div>
+        <h2>编译作用域</h2>
+    </div>
+</template>
+
+<body>
+<div id="app">
+    <sp1 v-show="isShow"></sp1>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+          isShow: true
+        },
+        components:{
+            sp1:{
+                template:`#apk`,
+                data(){
+                    return {isShow: true}
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

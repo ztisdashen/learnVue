@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js">
+
+
+    </script>
+</head>
+<body>
+<div id="app">
+<div @click.stop="divClick">
+    <button @click.stop="btnClick">button</button>
+    <form action="https://www.baidu.com/">
+        <input type="submit" value="submit" @click.prevent="submit_">
+    </form>
+</div>
+    <input type="text" @keyup.enter="keyuoda">
+</div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            count: 0
+        },
+        methods: {
+            divClick(){
+                console.log("divclick")},
+            btnClick(){
+                console.log("btnclick")},
+            submit_(){
+                console.log("submit")
+            },keyuoda(){
+                console.log("keyup")
+            }
+        }
+
+    })
+</script>
+</html>

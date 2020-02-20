@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const obj = {
+            name:"tom",
+            age:18,
+            run:function () {
+                console.log("eating")
+            }
+        };
+    //    属性的增强写法
+    //    ES5
+        const name="tom";
+        const age=16;
+        const obj2 = {
+            name:name,
+            age:age,
+            run:function () {
+
+            }
+        };
+    //    ES6
+        const obj3 = {
+            name,
+            age,
+            run(){
+
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

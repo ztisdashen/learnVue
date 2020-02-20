@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<template id="apk">
+    <div>
+        <h2>slot</h2>
+        <slot><h3>插槽中的默认值</h3></slot>
+    </div>
+</template>
+
+<body>
+<div id="app">
+    <sp1><button>案例</button></sp1>
+    <sp1><h2>案例</h2></sp1>
+    <sp1><hr></sp1>
+    <sp1/>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        methods: {
+        },
+        components:{
+            sp1:{
+                template:`#apk`,
+            }
+        }
+    })
+</script>
+</body>
+</html>
